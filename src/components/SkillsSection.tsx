@@ -7,40 +7,40 @@ const SkillsSection = () => {
     {
       title: "Frontend Technologies",
       skills: [
-        "React", "TypeScript", "JavaScript (ES6+)", "Next.js", "Vue.js",
-        "HTML5", "CSS3", "Sass/SCSS", "Tailwind CSS", "Styled Components"
+        "JavaScript", "TypeScript", "React.js", "Next.js", "Vue.js", "Nuxt.js",
+        "HTML5", "CSS3", "Redux", "Redux Toolkit", "Vuex", "jQuery"
       ],
     },
     {
-      title: "Tools & Frameworks",
+      title: "Backend & APIs",
       skills: [
-        "Git", "Webpack", "Vite", "npm/yarn", "ESLint", "Prettier",
-        "Jest", "Cypress", "Figma", "Adobe XD"
+        "Node.js", "Express.js", "REST APIs", "Laravel", "AWS API Gateway",
+        "RESTful APIs", "Microservices", "API Integration"
       ],
     },
     {
-      title: "Backend & Database",
+      title: "Tools & DevOps",
       skills: [
-        "Node.js", "Express.js", "REST APIs", "GraphQL", "MongoDB",
-        "PostgreSQL", "Firebase", "Supabase"
+        "Webpack", "NPM", "Yarn", "Git", "GitHub", "Jenkins", "AWS EC2",
+        "AWS RDS", "AWS S3", "Minio", "Sentry"
       ],
     },
     {
-      title: "Deployment & DevOps",
+      title: "Development & Testing",
       skills: [
-        "Vercel", "Netlify", "AWS", "Docker", "GitHub Actions",
-        "CI/CD", "Linux", "Nginx"
+        "Agile Methodology", "JIRA", "Trello", "Unit Testing", "Performance Testing",
+        "Micro Frontends", "CI/CD", "Code Review"
       ],
     },
   ];
 
   const expertiseAreas = [
     { name: "React & Ecosystem", level: 95 },
-    { name: "TypeScript", level: 90 },
-    { name: "CSS & Styling", level: 92 },
-    { name: "JavaScript", level: 95 },
-    { name: "Responsive Design", level: 98 },
-    { name: "Performance Optimization", level: 85 },
+    { name: "TypeScript", level: 92 },
+    { name: "JavaScript (ES6+)", level: 95 },
+    { name: "Next.js", level: 88 },
+    { name: "Redux/State Management", level: 90 },
+    { name: "Full Stack Development", level: 85 },
   ];
 
   return (
@@ -54,7 +54,8 @@ const SkillsSection = () => {
               My <span className="gradient-text">Skills</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A comprehensive toolkit of modern technologies and frameworks that I use to build exceptional web experiences.
+              5+ years of expertise in the JavaScript/TypeScript ecosystem with comprehensive experience 
+              in modern web development technologies and frameworks.
             </p>
           </div>
 

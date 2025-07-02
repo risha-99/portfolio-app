@@ -1,28 +1,28 @@
 
-import { Code, Coffee, Lightbulb, Users } from "lucide-react";
+import { Code, Users, Lightbulb, Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   const highlights = [
     {
       icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code following best practices",
+      title: "Full Stack Development",
+      description: "Expertise in JavaScript/TypeScript ecosystem with React.js, Next.js, and Node.js",
     },
     {
       icon: Users,
-      title: "Team Player",
-      description: "Collaborative approach with strong communication and problem-solving skills",
+      title: "Team Collaboration",
+      description: "Experience with Agile Development Methodology and cross-functional team collaboration",
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Always exploring new technologies and creative solutions to complex problems",
+      title: "Problem Solving",
+      description: "Independently solved complex requirements with exceptional logical skills",
     },
     {
-      icon: Coffee,
-      title: "Dedication",
-      description: "Passionate about continuous learning and delivering exceptional user experiences",
+      icon: Briefcase,
+      title: "Industry Experience",
+      description: "5+ years at Rubico Tech, working on complex application components and frameworks",
     },
   ];
 
@@ -35,8 +35,8 @@ const AboutSection = () => {
               About <span className="gradient-text">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              I'm a passionate frontend developer with 5+ years of experience building modern web applications.
-              I love turning complex problems into simple, beautiful designs.
+              A passionate Software Engineer with expertise in the JavaScript/TypeScript ecosystem and 
+              5 years of hands-on experience building modern web applications.
             </p>
           </div>
 
@@ -44,15 +44,21 @@ const AboutSection = () => {
             <div className="animate-slide-in-left">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  My journey in web development started 5 years ago when I discovered the perfect blend of 
-                  creativity and logic that frontend development offers. Since then, I've worked on numerous
-                  projects ranging from small business websites to large-scale enterprise applications.
+                  I have 5 years of experience working with React.js using TypeScript, utilizing tools such as 
+                  Webpack, NPM/Yarn, Routers, Redux, Redux-Toolkit, Flux, and Redux-Thunk. My expertise spans 
+                  the full development lifecycle from design to deployment.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I specialize in React, TypeScript, and modern CSS frameworks, always staying up-to-date 
-                  with the latest trends and best practices in the industry. My goal is to create seamless 
-                  user experiences that not only look great but also perform exceptionally well.
+                  Currently working as a Software Engineer at Rubico Tech Pvt Limited, I've designed and developed 
+                  highly complex application components, integrated software packages for multiple platforms, and 
+                  leveraged open-source solutions to build novel applications.
+                </p>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I'm familiar with newer specifications of ECMAScript and RESTful APIs, with experience in 
+                  Agile Development Methodology. I've successfully created applications resulting in significant 
+                  performance improvements and developed frameworks for more efficient development processes.
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-4">
@@ -60,10 +66,10 @@ const AboutSection = () => {
                     5+ Years Experience
                   </span>
                   <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                    50+ Projects Completed
+                    Full Stack Developer
                   </span>
                   <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                    Always Learning
+                    B.Tech (CSE) Graduate
                   </span>
                 </div>
               </div>
