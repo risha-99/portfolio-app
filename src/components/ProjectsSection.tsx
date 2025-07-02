@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,14 +7,24 @@ import { Badge } from "@/components/ui/badge";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "Tunescribers",
+      description: "World's leading provider of services for musicians, serving tens of thousands since 2017. Handled state management with Redux Toolkit, developed reusable components, and collaborated directly with client stakeholders for technical solutions.",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "Context API", "Redux Toolkit", "Express.js", "AWS EC2", "AWS RDS", "AWS API Gateway"],
+      client: "Leading provider of services for musicians worldwide",
+      role: "Full Stack Developer",
+      liveUrl: "https://www.tunescribers.com/",
+      showLiveButton: true,
+    },
+    {
       title: "Code Blue Corporation",
-      description: "Emergency communication solutions platform with real-time device status monitoring. Implemented SSR/CSR with Next.js and built robust APIs for real-time status updates. Created notification system for device status alerts.",
+      description: "Emergency communication solutions platform with real-time device status monitoring. We created the admin side of the application with SSR/CSR using Next.js and built robust APIs for real-time status updates. Created notification system for device status alerts.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["Next.js", "Node.js", "Redux Toolkit", "SSR/CSR", "Real-time APIs"],
       client: "Leading manufacturer of emergency communication solutions",
       role: "Full Stack Developer",
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://codeblue.com/",
+      showLiveButton: true,
     },
     {
       title: "West River Academy",
@@ -24,17 +34,7 @@ const ProjectsSection = () => {
       client: "Educational freedom platform for natural learning conversion",
       role: "Full Stack Developer",
       liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Tunescribers",
-      description: "World's leading provider of services for musicians, serving tens of thousands since 2017. Handled state management with Redux Toolkit, developed reusable components, and collaborated directly with client stakeholders for technical solutions.",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "Context API", "Redux Toolkit", "Express.js", "AWS EC2", "AWS RDS", "AWS API Gateway"],
-      client: "Leading provider of services for musicians worldwide",
-      role: "Full Stack Developer",
-      liveUrl: "#",
-      githubUrl: "#",
+      showLiveButton: false,
     },
   ];
 
@@ -121,16 +121,18 @@ const ProjectsSection = () => {
                         </div>
                       </div>
 
-                      <div className="flex gap-3 pt-4">
-                        <Button size="sm" className="flex-1 group/btn">
-                          <ExternalLink className="w-4 h-4 mr-2 transition-transform group-hover/btn:scale-110" />
-                          View Project
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1 group/btn">
-                          <Github className="w-4 h-4 mr-2 transition-transform group-hover/btn:scale-110" />
-                          Source Code
-                        </Button>
-                      </div>
+                      {project.showLiveButton && (
+                        <div className="pt-4">
+                          <Button 
+                            size="sm" 
+                            className="group/btn"
+                            onClick={() => window.open(project.liveUrl, '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2 transition-transform group-hover/btn:scale-110" />
+                            View Project
+                          </Button>
+                        </div>
+                      )}
                     </CardContent>
                   </div>
                 </div>
