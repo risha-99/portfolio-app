@@ -11,67 +11,80 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-1s' }} />
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm{" "}
-              <span className="gradient-text">Risha Bhandari</span>
-            </h1>
-            
-            <div className="flex flex-wrap justify-center items-center gap-4 mb-6 text-lg text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>rishabhandari01@gmail.com</span>
+            <div className="flex flex-col lg:flex-row items-center gap-8 mb-6">
+              <div className="flex-shrink-0">
+                <img
+                  src="/lovable-uploads/aa897492-4a1a-4585-bbff-2a7194064424.png"
+                  alt="Risha Bhandari"
+                  className="w-48 h-48 rounded-full object-cover border-4 border-primary/20 shadow-xl"
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>8433480476</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Dehradun, Uttarakhand</span>
+              <div className="text-center lg:text-left">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                  Hi, I'm{" "}
+                  <span className="gradient-text">Risha Bhandari</span>
+                </h1>
+                
+                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 mb-6 text-lg text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    <span>rishabhandari01@gmail.com</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    <span>8433480476</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>Dehradun, Uttarakhand</span>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Software Engineer with 5+ years of experience in JavaScript/TypeScript ecosystem, 
-              specializing in React.js, Next.js, and modern web development technologies.
-            </p>
+            <div className="text-center">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Software Engineer with 5+ years of experience in JavaScript/TypeScript ecosystem, 
+                specializing in React.js, Next.js, and modern web development technologies.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-                <a href="#projects" className="flex items-center">
-                  View My Work
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+                  <a href="#projects" className="flex items-center">
+                    View My Work
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="px-8 py-3 border-primary/50 hover:border-primary">
+                  Download Resume
+                </Button>
+              </div>
+
+              <div className="flex justify-center space-x-6">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+                  aria-label="GitHub"
+                >
+                  <Github size={24} />
                 </a>
-              </Button>
-              <Button size="lg" variant="outline" className="px-8 py-3 border-primary/50 hover:border-primary">
-                Download Resume
-              </Button>
-            </div>
-
-            <div className="flex justify-center space-x-6">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:rishabhandari01@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </a>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href="mailto:rishabhandari01@gmail.com"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
+                  aria-label="Email"
+                >
+                  <Mail size={24} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

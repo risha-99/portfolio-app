@@ -39,19 +39,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      content: "rishabhandari01@gmail.com",
+      href: "mailto:rishabhandari01@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      content: "8433480476",
+      href: "tel:8433480476",
     },
     {
       icon: MapPin,
       title: "Location",
-      content: "Your City, Country",
+      content: "Dehradun",
       href: "#",
     },
   ];

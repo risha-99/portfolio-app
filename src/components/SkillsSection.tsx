@@ -1,6 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Star } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -35,13 +36,26 @@ const SkillsSection = () => {
   ];
 
   const expertiseAreas = [
-    { name: "React & Ecosystem", level: 95 },
-    { name: "TypeScript", level: 92 },
-    { name: "JavaScript (ES6+)", level: 95 },
-    { name: "Next.js", level: 88 },
-    { name: "Redux/State Management", level: 90 },
-    { name: "Full Stack Development", level: 85 },
+    { name: "React & Ecosystem", rating: 5 },
+    { name: "TypeScript", rating: 5 },
+    { name: "JavaScript (ES6+)", rating: 5 },
+    { name: "Next.js", rating: 4 },
+    { name: "Redux/State Management", rating: 5 },
+    { name: "Full Stack Development", rating: 4 },
   ];
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-5 h-5 ${
+          index < rating
+            ? "text-yellow-500 fill-yellow-500"
+            : "text-gray-300 dark:text-gray-600"
+        }`}
+      />
+    ));
+  };
 
   return (
     <section id="skills" className="py-20 relative">
@@ -64,18 +78,16 @@ const SkillsSection = () => {
             <h3 className="text-2xl font-bold mb-8 text-center">Areas of Expertise</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {expertiseAreas.map((area, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">{area.name}</span>
-                    <span className="text-sm text-muted-foreground">{area.level}%</span>
-                  </div>
-                  <div className="w-full bg-secondary rounded-full h-2">
-                    <div
-                      className="bg-gradient-to-r from-primary to-blue-400 h-2 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${area.level}%` }}
-                    />
-                  </div>
-                </div>
+                <Card key={index} className="gradient-border bg-card/30 backdrop-blur-sm">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="font-medium text-lg">{area.name}</span>
+                    </div>
+                    <div className="flex gap-1">
+                      {renderStars(area.rating)}
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
