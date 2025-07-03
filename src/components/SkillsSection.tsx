@@ -1,7 +1,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -36,25 +35,25 @@ const SkillsSection = () => {
   ];
 
   const expertiseAreas = [
-    { name: "React & Ecosystem", rating: 5 },
-    { name: "TypeScript", rating: 5 },
-    { name: "JavaScript (ES6+)", rating: 5 },
-    { name: "Next.js", rating: 4 },
-    { name: "Redux/State Management", rating: 5 },
-    { name: "Full Stack Development", rating: 4 },
+    { name: "React & Ecosystem", level: "Expert" },
+    { name: "TypeScript", level: "Expert" },
+    { name: "JavaScript (ES6+)", level: "Expert" },
+    { name: "Next.js", level: "Advanced" },
+    { name: "Redux/State Management", level: "Expert" },
+    { name: "Full Stack Development", level: "Advanced" },
   ];
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`w-5 h-5 ${
-          index < rating
-            ? "text-yellow-500 fill-yellow-500"
-            : "text-gray-300 dark:text-gray-600"
-        }`}
-      />
-    ));
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case "Expert":
+        return "bg-green-500/20 text-green-400 border-green-500/30";
+      case "Advanced":
+        return "bg-blue-500/20 text-blue-400 border-blue-500/30";
+      case "Intermediate":
+        return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
+      default:
+        return "bg-gray-500/20 text-gray-400 border-gray-500/30";
+    }
   };
 
   return (
@@ -80,11 +79,14 @@ const SkillsSection = () => {
               {expertiseAreas.map((area, index) => (
                 <Card key={index} className="gradient-border bg-card/30 backdrop-blur-sm">
                   <CardContent className="p-6">
-                    <div className="flex justify-between items-center mb-3">
+                    <div className="flex justify-between items-center">
                       <span className="font-medium text-lg">{area.name}</span>
-                    </div>
-                    <div className="flex gap-1">
-                      {renderStars(area.rating)}
+                      <Badge 
+                        variant="outline" 
+                        className={`${getLevelColor(area.level)} font-semibold`}
+                      >
+                        {area.level}
+                      </Badge>
                     </div>
                   </CardContent>
                 </Card>
