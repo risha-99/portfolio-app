@@ -13,38 +13,35 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
-            <div className="flex flex-col lg:flex-row items-center gap-8 mb-6">
-              <div className="flex-shrink-0">
+            <div className="text-center mb-8">
+              <div className="flex justify-center mb-8">
                 <img
                   src="/lovable-uploads/aa897492-4a1a-4585-bbff-2a7194064424.png"
                   alt="Risha Bhandari"
-                  className="w-48 h-48 rounded-full object-cover border-4 border-primary/20 shadow-xl"
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/30 shadow-2xl"
                 />
               </div>
-              <div className="text-center lg:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                  Hi, I'm{" "}
-                  <span className="gradient-text">Risha Bhandari</span>
-                </h1>
-                
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4 mb-6 text-lg text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    <span>rishabhandari01@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <span>8433480476</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>Dehradun, Uttarakhand</span>
-                  </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm{" "}
+                <span className="gradient-text">Risha Bhandari</span>
+              </h1>
+              
+              <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-lg text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  <span>rishabhandari01@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <span>8433480476</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Dehradun, Uttarakhand</span>
                 </div>
               </div>
-            </div>
-            
-            <div className="text-center">
+              
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
                 Software Engineer with 5+ years of experience in JavaScript/TypeScript ecosystem, 
                 specializing in React.js, Next.js, and modern web development technologies.

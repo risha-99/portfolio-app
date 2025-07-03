@@ -1,40 +1,9 @@
 
-import { useState } from "react";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -73,61 +42,38 @@ const ContactSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* LinkedIn Connect Section */}
             <Card className="gradient-border bg-card/50 backdrop-blur-sm animate-slide-in-left">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold">Send Message</CardTitle>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl font-semibold">Let's Connect</CardTitle>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Input
-                        name="name"
-                        placeholder="Your Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="bg-background/50"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        name="email"
-                        type="email"
-                        placeholder="Your Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="bg-background/50"
-                      />
-                    </div>
-                  </div>
-                  
-                  <Input
-                    name="subject"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="bg-background/50"
-                  />
-                  
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="bg-background/50 resize-none"
-                  />
-                  
-                  <Button type="submit" size="lg" className="w-full group">
-                    <Send className="w-4 h-4 mr-2 transition-transform group-hover:translate-x-1" />
-                    Send Message
-                  </Button>
-                </form>
+              <CardContent className="text-center space-y-6">
+                <p className="text-muted-foreground">
+                  Connect with me on LinkedIn to discuss opportunities, collaborations, 
+                  and the latest in web development.
+                </p>
+                
+                <Button 
+                  size="lg" 
+                  className="w-full group bg-[#0077B5] hover:bg-[#0077B5]/90 text-white"
+                  asChild
+                >
+                  <a 
+                    href="https://www.linkedin.com/in/risha-bhandari-379707154/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    <Linkedin className="w-5 h-5 mr-2" />
+                    Connect on LinkedIn
+                  </a>
+                </Button>
+                
+                <div className="pt-6">
+                  <p className="text-sm text-muted-foreground">
+                    Or reach out directly via email or phone using the contact information below.
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
@@ -164,7 +110,7 @@ const ContactSection = () => {
               </div>
 
               <div className="pt-8">
-                <h4 className="font-semibold mb-4">Let's Connect</h4>
+                <h4 className="font-semibold mb-4">Professional Background</h4>
                 <p className="text-muted-foreground">
                   I'm always open to discussing new opportunities, collaborating on interesting projects, 
                   or just having a chat about the latest in web development. Don't hesitate to reach out!
