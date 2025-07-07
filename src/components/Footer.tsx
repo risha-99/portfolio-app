@@ -1,5 +1,4 @@
-
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,14 +25,9 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-                  aria-label="GitHub"
-                >
-                  <Github size={20} />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/risha-bhandari-379707154/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
                   aria-label="LinkedIn"
                 >

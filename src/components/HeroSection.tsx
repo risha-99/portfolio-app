@@ -1,5 +1,5 @@
 
-import { ArrowRight, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -61,14 +61,9 @@ const HeroSection = () => {
 
               <div className="flex justify-center space-x-6">
                 <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
-                  aria-label="GitHub"
-                >
-                  <Github size={24} />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/risha-bhandari-379707154/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
                   aria-label="LinkedIn"
                 >
