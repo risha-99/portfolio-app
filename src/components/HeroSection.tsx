@@ -47,15 +47,12 @@ const HeroSection = () => {
                 specializing in React.js, Next.js, and modern web development technologies.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex justify-center mb-12">
                 <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
                   <a href="#projects" className="flex items-center">
                     View My Work
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </a>
-                </Button>
-                <Button size="lg" variant="outline" className="px-8 py-3 border-primary/50 hover:border-primary">
-                  Download Resume
                 </Button>
               </div>
 
